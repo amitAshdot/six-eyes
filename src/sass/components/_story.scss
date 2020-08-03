@@ -1,0 +1,96 @@
+.story {
+    width: 75%;
+    padding: 6rem 6rem;
+    padding-left: 9rem;
+    page-break-after: 6rem;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rga($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
+    border-radius: 3px;
+    font-size: $defaut-font-size;
+    transform: skewX(-12deg);
+    backface-visibility: hidden;
+
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem 4rem;
+        padding-left: 7rem;
+
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+        padding: 4rem 4rem;
+
+    }
+
+    &__shape {
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        transform: skewX(12deg) translateX(-3rem);
+        backface-visibility: hidden;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path:(0 0)) {
+            -webkit-clip-path: circle(50% at 25% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: 0;
+        }
+
+        @include respond(tab-port) {
+            transform: skewX(12deg) translateX(-5rem);
+        }
+
+        @include respond(phone) {
+            transform: skewX(0) translateX(-1rem);
+        }
+    }
+
+    &__image {
+        height: 100%;
+        transform: translateX(-3.5rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        backface-visibility: hidden;
+    }
+
+    &:hover &__image {
+        transform: translateX(-3.5rem) scale(0.9);
+        filter: blur(3px) brightness(100%);
+        backface-visibility: hidden;
+
+    }
+}

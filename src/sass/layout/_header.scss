@@ -1,0 +1,171 @@
+.header {
+  height: 82vh;
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.8),
+  //     rgba($color-primary-dark, 0.8)
+  //   ),
+  //   url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right bottom, #667083, #282c34);
+  text-transform: uppercase;
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 45vh;
+    width: fit-content;
+    padding: 5rem;
+    transform: translateY(-50%);
+
+    &__ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      list-style: none;
+      animation: moveInRight 1s;
+
+      &--li a {
+        color: rgba($color-grey-light-1, 0.5);
+        padding: 1rem;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+
+        transition: all 0.3s;
+        &:hover {
+          color: rgba($color-grey-light-1, 1);
+          transform: scale(1.15);
+        }
+
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 100%;
+        //   // border-radius: 50%;
+        //   background: transparent;
+        //   transition: 0.3s;
+        //   transform: scale(0.9);
+        //   z-index: -1;
+        // }
+
+        &:hover {
+          color: #ffa502;
+          // box-shadow: 0 0 15px $color-secondary-dark;
+          text-shadow: 0 0 15px $color-secondary-dark;
+          &:before {
+            transform: scale(1);
+            // box-shadow: 0 0 30px $color-secondary-dark;
+            filter: blur(3px);
+          }
+        }
+      }
+    }
+  }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: (0 0)) {
+    height: 95vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and(-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
+    only screen and(min-width: 125em) {
+    // background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-primary-light, 0.8),
+    //     rgba($color-primary-dark, 0.8)
+    //   ),
+    //   url(../img/hero.jpg);
+  }
+
+  @include respond(tab-land) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+    animation: fadeIn 1s ease-in;
+    animation-fill-mode: backwards;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    /* relative to header */
+    position: fixed;
+    top: 42.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-p {
+      width: 0;
+      color: #fff;
+      font-family: monospace;
+      overflow: hidden;
+      border-right: 0.15em solid $color-secondary-dark;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 4.5s steps(35, end) forwards 1.5s,
+        blink-caret 0.5s step-end infinite;
+    }
+
+    &-button {
+      position: relative;
+      background: $color-grey-dark-4;
+      color: $color-primary-dark;
+      padding: 1.5rem 4rem;
+      font-size: 2rem;
+      border-radius: 1rem;
+      border: none;
+      margin-top: 3rem;
+      cursor: pointer;
+
+      transition: all 0.3s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // border-radius: 50%;
+        background: $color-secondary-dark;
+        transition: 0.3s;
+        transform: scale(0.9);
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #ffa502;
+        box-shadow: 0 0 15px $color-secondary-dark;
+        text-shadow: 0 0 15px $color-secondary-dark;
+        &:before {
+          transform: scale(1);
+          box-shadow: 0 0 30px $color-secondary-dark;
+          filter: blur(3px);
+        }
+      }
+
+      &:focus {
+        outline-style: none;
+      }
+    }
+  }
+}

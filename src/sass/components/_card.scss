@@ -1,0 +1,291 @@
+.card {
+  //Functionality
+  perspective: $perspectiv-normal;
+  -moz-perspective: $perspectiv-normal;
+  -webkit-perspective: $perspectiv-normal;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 51rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-react,
+          $color-react-dark
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-html,
+          $color-html-dark
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-js,
+          $color-js-dark
+        );
+      }
+      &--4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-sass,
+          $color-sass-dark
+        );
+      }
+
+      &--5 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-redux,
+          $color-redux-dark
+        );
+      }
+
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  //front side style
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border: 3px;
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-react,
+          $color-react-dark
+        ),
+        url(../../images/reactIcon.png);
+      background-position: left;
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-html,
+          $color-html-dark
+        ),
+        url(../../images/html.png);
+      background-position: center;
+      background-position-y: -40px;
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-js,
+          $color-js-dark
+        ),
+        url(../../images/JS.png);
+      background-position: bottom;
+    }
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-sass,
+          $color-sass-dark
+        ),
+        url(../../images/sass.png);
+      background-position: bottom;
+    }
+
+    &--5 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-redux,
+          $color-redux-dark
+        ),
+        url(../../images/Redux.png);
+      background-position: bottom;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 16rem;
+    right: 0rem;
+
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-react, 0.85),
+          rgba($color-react-dark, 0.85)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-html, 0.85),
+          rgba($color-html-dark, 0.85)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-js, 0.85),
+          rgba($color-js-dark, 0.85)
+        );
+      }
+      &--4 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-sass, 0.85),
+          rgba($color-sass-dark, 0.85)
+        );
+      }
+      &--5 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-redux, 0.85),
+          rgba($color-redux-dark, 0.85)
+        );
+      }
+    }
+  }
+
+  &__details {
+    padding: 1.5rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  //back side style
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-white;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  // -----media query to change the whole design
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    //Functionality
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--front {
+        background-color: $color-white;
+      }
+
+      &--back {
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        transform: rotateY(0);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 0 1rem;
+    }
+
+    //back side style
+    &__cta {
+      position: relative;
+      transform: translate(0%, 0%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
+}

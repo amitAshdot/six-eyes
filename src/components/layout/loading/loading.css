@@ -1,0 +1,93 @@
+:root {
+  --dot-radius: 30px;
+  --path-radius: 150px;
+  --vp-width: 700px;
+  --vp-height: 700px;
+
+  --static-dot-color: hsl(204, 100%, 65%);
+  --moving-dot-color: hsl(178, 94%, 65%);
+}
+
+/* --------------------------------------------------
+   Elements
+   -------------------------------------------------- */
+main {
+  width: 20vw;
+  margin: 0 auto;
+  /* background: #282c34; */
+  /* animation: outer 2s infinite; */
+}
+
+/* p {
+  color: var(--static-dot-color);
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  color: var(--moving-dot-color);
+  text-decoration: none;
+} */
+
+/* --------------------------------------------------
+   Classes
+   -------------------------------------------------- */
+
+.dot {
+  fill: var(--static-dot-color);
+}
+
+.dot--light {
+  fill: var(--moving-dot-color);
+  filter: url("#glow");
+}
+
+.dot--glowing {
+  fill: var(--moving-dot-color);
+  filter: url("#outer-glow");
+}
+
+.scanner {
+  will-change: transform;
+  animation: 2s scan 0s infinite linear both;
+}
+
+.circles {
+  filter: url("#goo");
+}
+
+.centered {
+  transform: translate(
+    calc((var(--vp-width) * 0.5) - var(--dot-radius)),
+    calc((var(--vp-height) * 0.5) - var(--dot-radius))
+  );
+}
+
+.credits {
+  margin-bottom: calc(1.5rem * 2);
+}
+
+@keyframes scan {
+  from {
+    transform: rotate(0deg) translateY(calc(var(--path-radius) * -1))
+      rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateY(calc(var(--path-radius) * -1))
+      rotate(-360deg);
+  }
+}
+
+@keyframes outer {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1) rotate(-360deg);
+  }
+  100% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+}

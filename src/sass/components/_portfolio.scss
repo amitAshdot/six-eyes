@@ -1,0 +1,31 @@
+.porfolio {
+  &__title {
+    background-color: orangered;
+
+    background-size: cover;
+    height: 6rem;
+    background-blend-mode: screen;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    height: 30rem;
+  }
+
+  &__item {
+    border: 1px solid black;
+    // background-image: linear-gradient(
+    //   125deg,
+    //   $color-primary-light,
+    //   $color-primary-dark
+    // );
+    &__headline {
+    }
+  }
+}
