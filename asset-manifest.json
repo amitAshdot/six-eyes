@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/six-eyes/static/css/main.817d7f80.chunk.css",
+    "main.js": "/six-eyes/static/js/main.bf5152ac.chunk.js",
+    "main.js.map": "/six-eyes/static/js/main.bf5152ac.chunk.js.map",
+    "runtime-main.js": "/six-eyes/static/js/runtime-main.d01551d3.js",
+    "runtime-main.js.map": "/six-eyes/static/js/runtime-main.d01551d3.js.map",
+    "static/js/2.3b22050c.chunk.js": "/six-eyes/static/js/2.3b22050c.chunk.js",
+    "static/js/2.3b22050c.chunk.js.map": "/six-eyes/static/js/2.3b22050c.chunk.js.map",
+    "index.html": "/six-eyes/index.html",
+    "precache-manifest.95c67db082a5b5ede32c74573a059020.js": "/six-eyes/precache-manifest.95c67db082a5b5ede32c74573a059020.js",
+    "service-worker.js": "/six-eyes/service-worker.js",
+    "static/css/main.817d7f80.chunk.css.map": "/six-eyes/static/css/main.817d7f80.chunk.css.map",
+    "static/js/2.3b22050c.chunk.js.LICENSE.txt": "/six-eyes/static/js/2.3b22050c.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/six-eyes/static/media/sass.eac0fdba.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d01551d3.js",
+    "static/js/2.3b22050c.chunk.js",
+    "static/css/main.817d7f80.chunk.css",
+    "static/js/main.bf5152ac.chunk.js"
+  ]
+}
