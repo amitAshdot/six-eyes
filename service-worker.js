@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/six-eyes/precache-manifest.30bf7165a4534d465df13da60250e69b.js"
+  "/six-eyes/precache-manifest.f86c92cf470788951d33fc644d106b5e.js"
 );
 
 self.addEventListener('message', (event) => {
