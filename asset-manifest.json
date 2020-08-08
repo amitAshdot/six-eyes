@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/six-eyes/static/css/main.ffde0516.chunk.css",
+    "main.css": "/six-eyes/static/css/main.bcf6bd2a.chunk.css",
     "main.js": "/six-eyes/static/js/main.9acc9c50.chunk.js",
     "main.js.map": "/six-eyes/static/js/main.9acc9c50.chunk.js.map",
     "runtime-main.js": "/six-eyes/static/js/runtime-main.d01551d3.js",
@@ -8,16 +8,16 @@
     "static/js/2.fcac298a.chunk.js": "/six-eyes/static/js/2.fcac298a.chunk.js",
     "static/js/2.fcac298a.chunk.js.map": "/six-eyes/static/js/2.fcac298a.chunk.js.map",
     "index.html": "/six-eyes/index.html",
-    "precache-manifest.486081e798334d09cf416cf85293de47.js": "/six-eyes/precache-manifest.486081e798334d09cf416cf85293de47.js",
+    "precache-manifest.30bf7165a4534d465df13da60250e69b.js": "/six-eyes/precache-manifest.30bf7165a4534d465df13da60250e69b.js",
     "service-worker.js": "/six-eyes/service-worker.js",
-    "static/css/main.ffde0516.chunk.css.map": "/six-eyes/static/css/main.ffde0516.chunk.css.map",
+    "static/css/main.bcf6bd2a.chunk.css.map": "/six-eyes/static/css/main.bcf6bd2a.chunk.css.map",
     "static/js/2.fcac298a.chunk.js.LICENSE.txt": "/six-eyes/static/js/2.fcac298a.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/six-eyes/static/media/sass.eac0fdba.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d01551d3.js",
     "static/js/2.fcac298a.chunk.js",
-    "static/css/main.ffde0516.chunk.css",
+    "static/css/main.bcf6bd2a.chunk.css",
     "static/js/main.9acc9c50.chunk.js"
   ]
 }
