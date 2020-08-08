@@ -53,6 +53,28 @@
     transform: translateY(0);
   }
 }
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  // 5% {
+  //   opacity: 0.8;
+  //   transform: translateY(-1.5rem);
+  // }
+  // 10% {
+  //   opacity: 1;
+  //   transform: translateY(0);
+  // }
+  85% {
+    transform: translateY(-1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes typing {
   0% {

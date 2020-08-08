@@ -1,7 +1,5 @@
 .porfolio {
   &__title {
-    background-color: orangered;
-
     background-size: cover;
     height: 6rem;
     background-blend-mode: screen;
@@ -11,20 +9,57 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
   }
   &__box {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     height: 30rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__item {
-    border: 1px solid black;
-    // background-image: linear-gradient(
-    //   125deg,
-    //   $color-primary-light,
-    //   $color-primary-dark
-    // );
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    width: 20%;
+
+    @include respond(tab-port) {
+      width: 90% !important;
+    }
+
+    &__btn {
+      width: 50%;
+      height: 50%;
+      transition: all 0.3s;
+      background: $color-grey-dark-4;
+      color: $color-grey-light-1;
+      &:hover {
+        // color: #ffa502;
+        // box-shadow: 0 0 25px $color-secondary-dark;
+        // text-shadow: 0 0 15px #ff7730;
+        transform: scale(1.08);
+        box-shadow: 0 1rem 25px $color-grey-dark-4;
+        transform: translateY(-1rem);
+      }
+
+      @include respond(tab-port) {
+        width: 90%;
+        height: 90%;
+      }
+    }
+
+    &__image {
+      max-width: 67px;
+    }
     &__headline {
     }
   }

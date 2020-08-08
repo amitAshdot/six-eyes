@@ -84,6 +84,10 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border: 3px;
 
+    @include respond(phone) {
+      height: 17rem;
+    }
+
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -103,6 +107,10 @@
         url(../../images/html.png);
       background-position: center;
       background-position-y: -40px;
+
+      @include respond(phone) {
+        background-position-y: -90px;
+      }
     }
 
     &--3 {
@@ -132,6 +140,11 @@
         ),
         url(../../images/Redux.png);
       background-position: bottom;
+
+      @include respond(phone) {
+        background-position: center;
+        background-position-y: -20px;
+      }
     }
   }
 
@@ -144,8 +157,11 @@
     position: absolute;
     top: 16rem;
     right: 0rem;
-
     width: 75%;
+
+    @include respond(phone) {
+      top: 12rem;
+    }
 
     &-span {
       padding: 1rem 1.5rem;
@@ -278,6 +294,10 @@
       left: 0;
       width: 100%;
       padding: 7rem 4rem 4rem 4rem;
+
+      @include respond(phone) {
+        padding: 3rem 4rem 2rem 4rem;
+      }
     }
 
     &__price-box {

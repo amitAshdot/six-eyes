@@ -28,7 +28,7 @@
       flex-direction: column;
       justify-content: space-around;
       list-style: none;
-      animation: moveInRight 1s;
+      animation: moveInTop 1s;
 
       &--li a {
         color: rgba($color-grey-light-1, 0.5);
@@ -68,6 +68,14 @@
           }
         }
       }
+    }
+
+    @include respond(tab-land) {
+      padding: 5rem 0rem;
+    }
+
+    @include respond(tab-port) {
+      display: none;
     }
   }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: (0 0)) {
@@ -113,16 +121,28 @@
     transform: translate(-50%, -50%);
 
     &-p {
-      width: 0;
-      color: #fff;
-      font-family: monospace;
-      overflow: hidden;
-      border-right: 0.15em solid $color-secondary-dark;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: 0.15em;
+      @include typingStyle;
+
       animation: typing 4.5s steps(35, end) forwards 1.5s,
         blink-caret 0.5s step-end infinite;
+
+      @include respond(phone) {
+        &-1 {
+          @include typingStyle;
+
+          animation: typing 2.5s steps(22, end) forwards 1.5s,
+            blink-caret 0.5s step-end infinite;
+        }
+        &-2 {
+          @include typingStyle;
+          animation: typing 2.5s steps(21, end) forwards 0s,
+            blink-caret 0.5s step-end infinite;
+        }
+
+        // white-space: inherit;
+        // animation: none;
+        // animation-fill-mode: forwards, none;
+      }
     }
 
     &-button {

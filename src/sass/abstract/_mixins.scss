@@ -22,6 +22,16 @@
   font-size: 3rem;
 }
 
+@mixin typingStyle {
+  width: 0;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid $color-secondary-dark;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+}
 //Media query manager
 /*
 0-600px : phone

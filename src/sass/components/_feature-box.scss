@@ -8,6 +8,8 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: all 0.5s;
+  animation: moveInTop 1s;
+  animation-fill-mode: backwards;
 
   &:hover {
     transform: translateY(2rem) scale(1.21);
@@ -35,8 +37,23 @@
     font-size: 0;
   }
 
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+    height: 21rem;
+  }
   @include respond(tab-port) {
     padding: 2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+    height: 15rem;
+    margin: auto;
+    width: 80%;
+
+    &:hover {
+      transform: translateY(2rem) scale(1.1);
+    }
   }
 
   &__icon {
@@ -67,6 +84,10 @@
     @include respond(tab-port) {
       margin-bottom: 0;
     }
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
@@ -88,4 +109,8 @@
   z-index: -1;
 
   animation: moveInLeft 2s linear infinite;
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }

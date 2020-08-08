@@ -1,5 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee, faBrain, faCode, faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import FeatureItem from './FeatureItem';
 
@@ -13,10 +13,8 @@ const Features = () => {
 
     const featuresItems = featuresArray.map((item, index) => {
         return (
-            <div className="col-1-of-4">
-                <FeatureItem icon={featuresArray[index].icon} headline={featuresArray[index].headline} text={featuresArray[index].text} />
-                {index < featuresArray.length - 1 ? <p className={`section-features__next`}> &rang;&rang;</p> : null}
-
+            <div className="col-1-of-4" key={index}>
+                <FeatureItem icon={featuresArray[index].icon} headline={featuresArray[index].headline} text={featuresArray[index].text} index={index} />
             </div>
         )
     })
