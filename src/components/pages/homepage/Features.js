@@ -4,13 +4,13 @@ import { faCoffee, faBrain, faCode, faWindowMaximize } from "@fortawesome/free-s
 import FeatureItem from './FeatureItem';
 
 const Features = (props) => {
-    const {startAnimation} = props
+    const { startAnimation } = props
 
     const featuresArray = [
-        { icon: faCoffee, headline: 'A Cup Of Coffee', text: "Where we meet, I will learn you vision and needs" },
-        { icon: faBrain, headline: 'Brain Storm', text: "Where we will talk about design and features, there is a good chance i will offer new ideas as well." },
-        { icon: faCode, headline: 'Coding', text: "Where I do the job done!, will work hard to make everhthing perfect and bugless" },
-        { icon: faWindowMaximize, headline: 'Go Live', text: "After your premission, one of us will make the webste live and start track customers!" },
+        { icon: faCoffee, headline: 'A Cup Of Coffee', text: "I will get to know you, learn your vision and needs" },
+        { icon: faBrain, headline: 'Brain Storm', text: "Design, features, animaion" },
+        { icon: faCode, headline: 'Coding', text: "Where I get the job done!, will work hard to make everhthing perfect." },
+        { icon: faWindowMaximize, headline: 'Go Live', text: "that's it! your website is LIVE! " },
     ]
 
     const featuresItems = featuresArray.map((item, index) => {
@@ -22,15 +22,15 @@ const Features = (props) => {
     })
 
     return (
-        <div className="section-features">
+        <div className="section-features" id="features">
             <h2 className="section-features__headline">
                 The Process
             </h2>
-             {startAnimation?
-            <div className="row" style={{ position: 'relative' }}>    
-                {featuresItems}
-            </div>:
-              null}
+            {startAnimation ?
+                <div className="row" style={{ position: 'relative' }}>
+                    {featuresItems}
+                </div> :
+                null}
         </div>
     )
 }

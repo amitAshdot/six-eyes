@@ -123,7 +123,7 @@
     &-p {
       @include typingStyle;
 
-      animation: typing 4.5s steps(35, end) forwards 1.5s,
+      animation: typing 4.5s steps(35, end) forwards 1s,
         blink-caret 0.5s step-end infinite;
 
       @include respond(phone) {
@@ -147,6 +147,7 @@
 
     &-button {
       position: relative;
+      font-family: monospace;
       background: $color-grey-dark-4;
       color: $color-primary-dark;
       padding: 1.5rem 4rem;
@@ -157,6 +158,10 @@
       cursor: pointer;
 
       transition: all 0.3s;
+
+      @include respond(tab-land) {
+        color: $color-grey-light-1;
+      }
 
       &:before {
         content: "";
