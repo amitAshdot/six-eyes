@@ -35,4 +35,3 @@ const handleScroll = e => {
 }
 
 export default Homepage
-

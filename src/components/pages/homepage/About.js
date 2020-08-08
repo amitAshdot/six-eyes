@@ -9,7 +9,7 @@ const About = () => {
     const [secondCardList] = useState([
         {id:4, heading:`SASS`, ul: ['Best Performance','Super Realiable','Made By Facebook','Scalable','Level: Advance'] },
         {id:5, heading:`REDUX`, ul: ['The Basic Off All Websites','The Standard','SEO Perfection','Level: Advance'] },
-        {id:6, heading:`Java Script`, ul: ['Object Oriented Programming','Light Weighted','Client Side','Level: Advance'] },
+        {id:6, heading:`OOP`, ul: ['Object Oriented Programming','Light Weighted','Client Side','Level: Advance'] },
     ])
 
     const upperList = firstCardList.map((card , i) =>{

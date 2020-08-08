@@ -63,7 +63,7 @@ const Header = () => {
             </div>
             <div className="header__text-box">
                 {typpingTxt}
-                <MainBtn class="header__text-box-button" text="see more &rarr;" />
+                <MainBtn class="header__text-box-button" text="see more &rarr;" onClick={handleClick}/>
             </div>
         </div>
     )

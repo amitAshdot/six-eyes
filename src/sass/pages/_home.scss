@@ -70,6 +70,18 @@
   @include respond(tab-port) {
     padding: 7rem 0;
   }
+
+  &__email {
+    background-image: linear-gradient(
+      to right,
+      $color-grey-light-1,
+      $color-grey-light-2
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    text-decoration-line: none;
+  }
 }
 
 .book {

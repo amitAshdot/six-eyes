@@ -21,7 +21,6 @@ const Features = (props) => {
         )
     })
 
-
     return (
         <div className="section-features">
             <h2 className="section-features__headline">

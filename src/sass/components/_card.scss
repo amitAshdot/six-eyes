@@ -62,6 +62,13 @@
           $color-redux-dark
         );
       }
+      &--6 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-oop,
+          $color-oop-dark
+        );
+      }
 
       transform: rotateY(180deg);
     }
@@ -146,6 +153,20 @@
         background-position-y: -20px;
       }
     }
+    &--6 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-oop,
+          $color-oop-dark
+        ),
+        url(../../images/oop.png);
+      background-position: bottom;
+
+      @include respond(phone) {
+        background-position: center;
+        background-position-y: -20px;
+      }
+    }
   }
 
   &__heading {
@@ -203,6 +224,14 @@
           to right bottom,
           rgba($color-redux, 0.85),
           rgba($color-redux-dark, 0.85)
+        );
+      }
+
+      &--6 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-oop, 0.85),
+          rgba($color-oop-dark, 0.85)
         );
       }
     }
