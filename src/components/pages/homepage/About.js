@@ -14,7 +14,7 @@ const About = () => {
 
     const upperList = firstCardList.map((card , i) =>{
         return  (
-        <div className="col-1-of-3">
+        <div className="col-1-of-3" key={i}>
             <Card id={firstCardList[i].id}  heading={firstCardList[i].heading} ul={firstCardList[i].ul} />
         </div>
         )
@@ -22,7 +22,7 @@ const About = () => {
 
     const lowerList = secondCardList.map((card , i) =>{
         return  (
-        <div className="col-1-of-3">
+        <div className="col-1-of-3" key={i}>
             <Card id={secondCardList[i].id}  heading={secondCardList[i].heading} ul={secondCardList[i].ul} />
         </div>
         )

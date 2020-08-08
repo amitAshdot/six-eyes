@@ -14,13 +14,13 @@ const Portfolio = () => {
                      <div className="porfolio__item col-1-of-2">
                          <a href="https://amitashdot.github.io/mine-sweeper/" target="_blank" rel="noopener noreferrer" className="porfolio__item__btn btn">
                             <h2>Mine-Sweeper</h2>
-                            <img src={minsweeperImg} alt="mine-sweeper symbol" class="porfolio__item__image"/>
+                            <img src={minsweeperImg} alt="mine-sweeper symbol" className="porfolio__item__image"/>
                          </a>
                     </div>
                     <div className="porfolio__item col-1-of-2">
                          <a href="https://onandoff.co.il/" target="_blank" rel="noopener noreferrer" className="porfolio__item__btn btn ">
                             <h2>OnAndOff</h2>
-                            <img src={onandoffImg} alt="onandoff symbol" class="porfolio__item__image"/>
+                            <img src={onandoffImg} alt="onandoff symbol" className="porfolio__item__image"/>
                          </a>
                     </div>
                 </div>

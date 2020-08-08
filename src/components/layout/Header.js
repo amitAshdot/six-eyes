@@ -51,7 +51,6 @@ const Header = () => {
         <div className="App-header header">
             <div className="header__logo-box">
                 <div className="header__logo">
-                {width}
                 </div>
             </div>
             <div className="header__list">

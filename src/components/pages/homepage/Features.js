@@ -3,7 +3,9 @@ import React from 'react'
 import { faCoffee, faBrain, faCode, faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import FeatureItem from './FeatureItem';
 
-const Features = () => {
+const Features = (props) => {
+    const {startAnimation} = props
+
     const featuresArray = [
         { icon: faCoffee, headline: 'A Cup Of Coffee', text: "Where we meet, I will learn you vision and needs" },
         { icon: faBrain, headline: 'Brain Storm', text: "Where we will talk about design and features, there is a good chance i will offer new ideas as well." },
@@ -18,15 +20,18 @@ const Features = () => {
             </div>
         )
     })
+
+
     return (
         <div className="section-features">
             <h2 className="section-features__headline">
                 The Process
             </h2>
-            <div className="row" style={{ position: 'relative' }}>
+             {startAnimation?
+            <div className="row" style={{ position: 'relative' }}>    
                 {featuresItems}
-
-            </div>
+            </div>:
+              null}
         </div>
     )
 }
