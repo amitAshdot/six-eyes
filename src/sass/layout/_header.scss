@@ -155,12 +155,37 @@
       border-radius: 1rem;
       border: none;
       margin-top: 3rem;
+      text-decoration: none;
+
       cursor: pointer;
 
       transition: all 0.3s;
+      & a {
+        color: $color-primary-dark;
 
+        &:hover {
+          color: #ffa502;
+          text-shadow: 0 0 15px $color-secondary-dark;
+        }
+        &:link {
+          text-decoration: none;
+        }
+
+        &:visited {
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:active {
+          text-decoration: none;
+        }
+      }
       @include respond(tab-land) {
         color: $color-grey-light-1;
+        text-decoration: none;
       }
 
       &:before {

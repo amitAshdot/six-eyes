@@ -25,6 +25,11 @@
 
   transition: all 0.3s;
 
+  &-back {
+    background: transparent;
+    border: none;
+    margin-top: 5rem;
+  }
   &:before {
     content: "";
     position: absolute;

@@ -1,87 +1,86 @@
 .footer {
-    background-color: $color-grey-dark-3;
-    padding: 10rem 0;
+  background-color: $color-grey-dark-3;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
     font-size: 1.4rem;
-    color: $color-grey-light-1;
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
 
     @include respond(tab-port) {
-        padding: 8rem 0;
-        font-size: 1.4rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+  }
+
+  &__list {
+    list-style: none;
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 1rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
     }
 
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__logo-box {
-        text-align: center;
-        margin-bottom: 8rem;
+  &__item {
+    display: inline-block;
 
-        @include respond(tab-port) {
-            margin-bottom: 6rem;
-        }
+    @include respond(phone) {
+      padding: 0px 3px;
     }
 
-    &__logo {
-        width: 15rem;
-        height: auto;
+    // &:not(:last-child) {
+    //     margin-right: 5rem;
+    // }
+  }
+
+  &__link {
+    transition: all 0.2s;
+
+    &:link,
+    &:visited {
+      color: $color-grey-dark-4;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
     }
 
-    &__navigation {}
-
-    &__list {
-        list-style: none;
-        border-top: 1px solid $color-grey-dark;
-        padding-top: 1rem;
-
-        @include respond(tab-port) {
-            width: 100%;
-            text-align: center;
-        }
-
-        display: flex;
-        justify-content: space-between;
+    &:hover,
+    &:active {
+      color: $color-primary;
+      // box-shadow: 0 1rem 1rem rgba($color-black, 0.4);
+      transform: rotate(4deg) scale(1.2);
     }
+  }
 
-    &__item {
-        display: inline-block;
+  &__copyright {
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 1rem;
+    widows: 80%;
+    float: right;
 
-        @include respond(phone) {
-            padding: 0px 3px;
-
-        }
-
-        // &:not(:last-child) {
-        //     margin-right: 5rem;
-        // }
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
     }
-
-    &__link {
-        transition: all 0.2s;
-
-        &:link,
-        &:visited {
-            color: $color-grey-light-1;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-block;
-        }
-
-        &:hover,
-        &:active {
-            color: $color-primary;
-            // box-shadow: 0 1rem 1rem rgba($color-black, 0.4);
-            transform: rotate(4deg) scale(1.2);
-        }
-    }
-
-    &__copyright {
-        border-top: 1px solid $color-grey-dark;
-        padding-top: 1rem;
-        widows: 80%;
-        float: right;
-
-        @include respond(tab-port) {
-            width: 100%;
-            text-align: center;
-            float: none;
-        }
-    }
+  }
 }

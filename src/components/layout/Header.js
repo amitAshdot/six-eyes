@@ -19,12 +19,6 @@ const Header = () => {
 
     const ref = React.createRef();
 
-    const handleClick = () =>
-        ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-
     const checkStyleBottm = () => {
         if (animation.firstEnd) {
             return { animation: "typing 2.5s steps(14, end) forwards 4s,blink-caret 0.5s step-end infinite;" }
@@ -63,7 +57,7 @@ const Header = () => {
             </div>
             <div className="header__text-box">
                 {typpingTxt}
-                <MainBtn class="header__text-box-button" text="see more &rarr;" onClick={handleClick} />
+                <MainBtn class="header__text-box-button" text="see more &rarr;" />
             </div>
         </div>
     )

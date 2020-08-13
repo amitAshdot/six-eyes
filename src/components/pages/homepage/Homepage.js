@@ -1,35 +1,40 @@
-import React, {useState, useEffect , useRef, useCallback} from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import About from './About';
 import Features from './Features';
 import Portfolio from './Portfolio';
 import Contact from './Contact'
+import Footer from './Footer';
 const Homepage = () => {
-   const [scrollHieght, setscrollHieght] = useState({reached:false})
- useEffect(() => {
-         window.addEventListener('scroll', handleScroll);
-     return () => {
-          window.removeEventListener('scroll', handleScroll);
-     }
- }, [])
-   
-const handleScroll = e => {
-    let element = e.target.scrollingElement
-    let sectionAbout = document.getElementsByClassName("section-about");
-    let scrollTop = e.srcElement.body.scrollTop,
-    itemTranslate = Math.min(0, scrollTop/3 - 60);
-    if ( element.scrollTop >= sectionAbout[0].clientHeight-100) {
-        setscrollHieght({reached : true})
+    const [scrollHieght, setscrollHieght] = useState({ reachedFeatures: false, reachedAbout: false })
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
+    const handleScroll = e => {
+        let element = e.target.scrollingElement
+        let sectionAbout = document.getElementsByClassName("section-about");
+        let header = document.getElementsByClassName("header");
+        // let header = document.getElementsByClassName("header");
+        if (element.scrollTop >= sectionAbout[0].clientHeight - 100) {
+            setscrollHieght({ reachedFeatures: true })
+        }
+        else if (element.scrollTop >= header[0].clientHeight - 750) {
+
+        }
+        else {
+            setscrollHieght({ reachedFeatures: false })
+        }
     }
-    else{
-        setscrollHieght({reached : false})
-    }
-  }
     return (
         <div className="homepage"  >
-            <About />
-            <Features startAnimation={scrollHieght.reached}/>
+            <About startAnimation={scrollHieght.reachedAbout} />
+            <Features startAnimation={scrollHieght.reachedFeatures} />
             <Portfolio />
             <Contact />
+            <Footer />
         </div>
     )
 }

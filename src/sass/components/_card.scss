@@ -24,6 +24,9 @@
     }
 
     &--back {
+      @include respond(tab-port) {
+        display: none;
+      }
       &--1 {
         background-image: linear-gradient(
           to right bottom,
@@ -92,7 +95,7 @@
     border: 3px;
 
     @include respond(phone) {
-      height: 17rem;
+      height: 25rem;
     }
 
     &--1 {
@@ -160,11 +163,10 @@
           $color-oop-dark
         ),
         url(../../images/oop.png);
-      background-position: bottom;
+      background-position: center;
 
       @include respond(phone) {
         background-position: center;
-        background-position-y: -20px;
       }
     }
   }
