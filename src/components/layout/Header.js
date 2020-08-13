@@ -21,7 +21,7 @@ const Header = () => {
 
     const checkStyleBottm = () => {
         if (animation.firstEnd) {
-            return { animation: "typing 2.5s steps(14, end) forwards 4s,blink-caret 0.5s step-end infinite;" }
+            return { animation: "typing 2.5s steps(14, end) forwards 4s,blink-caret 0.5s step-end infinite" }
         }
         return { display: "none" }
     }

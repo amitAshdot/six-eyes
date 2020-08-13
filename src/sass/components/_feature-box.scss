@@ -12,7 +12,6 @@
   animation-fill-mode: backwards;
 
   &:hover {
-    // transform: translateY(2rem);
     background-color: $color-primary;
     // height: 19rem;
     font-size: 1.5rem;
@@ -47,7 +46,7 @@
 
   @include respond(phone) {
     font-size: 2rem;
-    height: 15rem;
+    height: 17rem;
     margin: auto;
     width: 80%;
 
@@ -76,11 +75,15 @@
     color: $color-white;
     border-top: black solid 1px;
     padding: 2rem;
-    height: 10rem;
+    height: 18rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include respond(phone) {
+      height: 12.5rem;
+    }
   }
 }
 

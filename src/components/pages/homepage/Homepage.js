@@ -11,7 +11,7 @@ const Homepage = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-    }, [])
+    }, [scrollHieght])
 
     const handleScroll = e => {
         let element = e.target.scrollingElement
@@ -19,9 +19,6 @@ const Homepage = () => {
         let header = document.getElementsByClassName("header");
         if (element.scrollTop >= sectionAbout[0].clientHeight - 100) {
             setscrollHieght({ reachedFeatures: true })
-        }
-        else if (element.scrollTop >= header[0].clientHeight - 750) {
-
         }
         else {
             setscrollHieght({ reachedFeatures: false })
