@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import About from './About';
 import Features from './Features';
 import Portfolio from './Portfolio';
@@ -17,7 +17,6 @@ const Homepage = () => {
         let element = e.target.scrollingElement
         let sectionAbout = document.getElementsByClassName("section-about");
         let header = document.getElementsByClassName("header");
-        // let header = document.getElementsByClassName("header");
         if (element.scrollTop >= sectionAbout[0].clientHeight - 100) {
             setscrollHieght({ reachedFeatures: true })
         }
