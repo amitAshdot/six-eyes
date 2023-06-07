@@ -6,6 +6,7 @@
     border-radius: 5rem;
     display: inline-block;
   }
+
   &,
   &:link,
   &:visited {
@@ -82,6 +83,7 @@
 }
 
 .btn-text {
+
   &:link,
   &:visited {
     font-size: $defaut-font-size;

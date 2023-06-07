@@ -32,6 +32,7 @@
   margin: 0 auto;
   letter-spacing: 0.15em;
 }
+
 //Media query manager
 /*
 0-600px : phone
@@ -66,14 +67,14 @@ ORDER: Base + typographyy > general layout + grid > page layout > components
   }
 
   @if $breakpoint==tab-land {
-    @media only screen and(max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       // 1200px
       @content;
     }
   }
 
   @if $breakpoint==big-desktop {
-    @media only screen and(min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       // 1800px
       @content;
     }

@@ -38,6 +38,7 @@
         text-decoration: none;
 
         transition: all 0.3s;
+
         &:hover {
           color: rgba($color-grey-light-1, 1);
           transform: scale(1.15);
@@ -61,6 +62,7 @@
           color: #ffa502;
           // box-shadow: 0 0 15px $color-secondary-dark;
           text-shadow: 0 0 15px $color-secondary-dark;
+
           &:before {
             transform: scale(1);
             // box-shadow: 0 0 30px $color-secondary-dark;
@@ -78,6 +80,7 @@
       display: none;
     }
   }
+
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: (0 0)) {
     height: 95vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -85,8 +88,8 @@
   }
 
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-    only screen and(-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
-    only screen and(min-width: 125em) {
+  only screen and (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
+  only screen and (min-width: 125em) {
     // background-image: linear-gradient(
     //     to right bottom,
     //     rgba($color-primary-light, 0.8),
@@ -133,6 +136,7 @@
           animation: typing 2.5s steps(22, end) forwards 1.5s,
             blink-caret 0.5s step-end infinite;
         }
+
         &-2 {
           @include typingStyle;
           animation: typing 2.5s steps(21, end) forwards 0s,
@@ -160,6 +164,7 @@
       cursor: pointer;
 
       transition: all 0.3s;
+
       & a {
         color: $color-primary-dark;
 
@@ -167,6 +172,7 @@
           color: #ffa502;
           text-shadow: 0 0 15px $color-secondary-dark;
         }
+
         &:link {
           text-decoration: none;
         }
@@ -183,6 +189,7 @@
           text-decoration: none;
         }
       }
+
       @include respond(tab-land) {
         color: $color-grey-light-1;
         text-decoration: none;
@@ -206,6 +213,7 @@
         color: #ffa502;
         box-shadow: 0 0 15px $color-secondary-dark;
         text-shadow: 0 0 15px $color-secondary-dark;
+
         &:before {
           transform: scale(1);
           box-shadow: 0 0 30px $color-secondary-dark;

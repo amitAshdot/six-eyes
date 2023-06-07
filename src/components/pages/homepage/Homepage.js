@@ -4,6 +4,7 @@ import Features from './Features';
 import Portfolio from './Portfolio';
 import Contact from './Contact'
 import Footer from './Footer';
+import Customers from './Customers';
 const Homepage = () => {
     const [scrollHieght, setscrollHieght] = useState({ reachedFeatures: false, reachedAbout: false })
     useEffect(() => {
@@ -28,6 +29,7 @@ const Homepage = () => {
         <div className="homepage"  >
             <About startAnimation={scrollHieght.reachedAbout} />
             <Features startAnimation={scrollHieght.reachedFeatures} />
+            <Customers />
             <Portfolio />
             <Contact />
             <Footer />

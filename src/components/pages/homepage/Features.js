@@ -23,14 +23,12 @@ const Features = (props) => {
 
     return (
         <div className="section-features" id="features">
-            <h2 className="section-features__headline">
-                The Process
-            </h2>
-            {startAnimation ?
+            <h2 className="section-features__headline">The Process</h2>
+            {startAnimation &&
                 <div className="row" style={{ position: 'relative' }}>
                     {featuresItems}
-                </div> :
-                null}
+                </div>
+            }
         </div>
     )
 }

@@ -6,6 +6,7 @@
   & h2 {
     margin-bottom: 2rem;
   }
+
   @include respond(tab-port) {
     padding: 22rem 0 18rem 0;
   }
@@ -13,19 +14,18 @@
 
 .section-features {
   padding: 10rem 0 15rem;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-light, 1.8),
-    rgba($color-primary-dark, 1.8)
-  );
+  background-image: linear-gradient(to right bottom,
+      rgba($color-primary-light, 1.8),
+      rgba($color-primary-dark, 1.8));
   background-size: cover;
   margin-top: -10rem;
   transform: skewY(-7deg);
+
   &__headline {
     margin-bottom: 3rem;
   }
 
-  & > * {
+  &>* {
     transform: skewY(7deg);
   }
 
@@ -33,18 +33,20 @@
     padding: 8rem 0;
     transform: skewY(-8deg);
 
-    & > * {
+    &>* {
       transform: skewY(8deg);
     }
   }
 }
+
 .section_porfolio {
   background-color: $color-grey-light-1;
-  padding: 23rem 0 3rem 0;
+  padding: 5rem 0 3rem 0;
   margin-top: -10rem;
 
   @include respond(tab-port) {
-    padding: 17rem 0 3rem 0;
+    margin-top: -5rem;
+    // padding: 17rem 0 3rem 0;
   }
 }
 
@@ -61,22 +63,18 @@
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark
-  );
+  background-image: linear-gradient(to right bottom,
+      $color-primary-light,
+      $color-primary-dark );
 
   @include respond(tab-port) {
     padding: 7rem 0;
   }
 
   &__email {
-    background-image: linear-gradient(
-      to right,
-      $color-grey-light-1,
-      $color-grey-light-2
-    );
+    background-image: linear-gradient(to right,
+        $color-grey-light-1,
+        $color-grey-light-2 );
     -webkit-background-clip: text;
     color: transparent;
 
@@ -85,46 +83,16 @@
 }
 
 .book {
-  // background-image: linear-gradient(105deg,
-  //         rgba($color-white, 0.9) 0%,
-  //         rgba($color-white, 0.9) 50%,
-  //         transparent 50%),
-  //     url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
 
   @include respond(tab-land) {
-    // background-image: linear-gradient(105deg,
-    //         rgba($color-white, 0.9) 0%,
-    //         rgba($color-white, 0.9) 65%,
-    //         transparent 65%),
-    //     url(../img/nat-10.jpg);
     background-size: cover;
     height: 50rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
   }
-
-  @include respond(tab-port) {
-    // background-image: linear-gradient(to right,
-    //         rgba($color-white, 0.8) 0%,
-    //         rgba($color-white, 0.8) 100%,
-    //     ),
-    //     url(../img/nat-10.jpg);
-  }
-
-  // @include respond(phone) {
-  //     background-image: linear-gradient(105deg,
-  //             rgba($color-white, 0.9) 0%,
-  //             rgba($color-white, 0.9) 65%,
-  //             transparent 65%),
-  //         url(../../img/nat-10.jpg);
-  //     background-size: cover;
-  //     height: 50rem;
-  //     border-radius: 3px;
-  //     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
-  // }
 
   &__form {
     width: 50%;
@@ -139,4 +107,80 @@
       width: 100%;
     }
   }
+}
+
+
+
+.customers {
+  &-section {
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+      padding: 10rem 0;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 120rem;
+
+    @include respond(tab-port) {
+      margin-top: 3rem;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__item {
+    width: 30%;
+    margin: 0 1.5rem;
+    flex-grow: 1;
+    flex: 1;
+    color: black;
+
+    // color: $color-grey-dark-3;
+    @include respond(tab-port) {
+      width: 90%;
+      border: 1px solid $color-grey-dark-3;
+      border-radius: 1rem;
+      padding: 3rem;
+      // background: $color-grey-light-2;
+    }
+
+    &__image {
+      width: 60%;
+      flex-grow: 1;
+    }
+
+
+    &__btn {
+      // width: 50%;
+      // height: 50%;
+      transition: all 0.3s;
+      // background: $color-grey-dark-4;
+      color: $color-grey-dark-4 ;
+      border-radius: 1rem;
+      border: 1px solid;
+
+      &:hover {
+        // color: #ffa502;
+        // box-shadow: 0 0 25px $color-secondary-dark;
+        // text-shadow: 0 0 15px #ff7730;
+        transform: scale(1.08);
+        box-shadow: 0 1rem 25px $color-grey-dark-4;
+        transform: translateY(-1rem);
+      }
+
+      @include respond(tab-port) {
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+
 }

@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Card from '../../card/Card'
 const About = (props) => {
     const [firstCardList] = useState([
-        { id: 1, heading: `REACT.JS`, ul: ['Best Performance', 'Super Realiable', 'Made By Facebook', 'Scalable', 'Level: Advance'] },
-        { id: 2, heading: `HTML5 CSS3`, ul: ['The Basic Off All Websites', 'The Standard', 'SEO Perfection', 'Level: Advance'] },
+        { id: 1, heading: `REACT.JS`, ul: ['Best Performance', 'Super Reliable', 'Made By Facebook', 'Scalable', 'Level: Advance'] },
         { id: 3, heading: `Java Script`, ul: ['Object Oriented Programming', 'Light Weighted', 'Client Side', 'Level: Advance'] },
+        { id: 2, heading: `PHP`, ul: ['SSR', 'Large Community', 'Open Source', 'Level: Moderate'] },
     ])
     const [secondCardList] = useState([
         { id: 4, heading: `SASS`, ul: ['Faster design', 'Has functions', 'Has mixins', 'Scalable', 'Level: Good'] },

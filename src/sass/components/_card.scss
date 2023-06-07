@@ -27,50 +27,41 @@
       @include respond(tab-port) {
         display: none;
       }
+
       &--1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-react,
-          $color-react-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-react,
+            $color-react-dark );
       }
 
       &--2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-html,
-          $color-html-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-php,
+            $color-php-dark );
       }
 
       &--3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-js,
-          $color-js-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-js,
+            $color-js-dark );
       }
+
       &--4 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-sass,
-          $color-sass-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-sass,
+            $color-sass-dark );
       }
 
       &--5 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-redux,
-          $color-redux-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-redux,
+            $color-redux-dark );
       }
+
       &--6 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-oop,
-          $color-oop-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-oop,
+            $color-oop-dark );
       }
 
       transform: rotateY(180deg);
@@ -99,22 +90,18 @@
     }
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-react,
-          $color-react-dark
-        ),
+          $color-react-dark ),
         url(../../images/reactIcon.png);
       background-position: left;
     }
 
     &--2 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-html,
-          $color-html-dark
-        ),
-        url(../../images/html.png);
+      background-image: linear-gradient(to right bottom,
+          $color-php,
+          $color-php-dark ),
+        url(../../images/php.png);
       background-position: center;
       // background-position-y: -40px;
 
@@ -124,30 +111,25 @@
     }
 
     &--3 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-js,
-          $color-js-dark
-        ),
+          $color-js-dark ),
         url(../../images/JS.png);
       background-position: bottom;
     }
+
     &--4 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-sass,
-          $color-sass-dark
-        ),
+          $color-sass-dark ),
         url(../../images/sass.png);
       background-position: bottom;
     }
 
     &--5 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-redux,
-          $color-redux-dark
-        ),
+          $color-redux-dark ),
         url(../../images/Redux.png);
       background-position: bottom;
 
@@ -156,12 +138,11 @@
         // background-position-y: -20px;
       }
     }
+
     &--6 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-oop,
-          $color-oop-dark
-        ),
+          $color-oop-dark ),
         url(../../images/oop.png);
       background-position: center;
 
@@ -192,49 +173,39 @@
       box-decoration-break: clone;
 
       &--1 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-react, 0.85),
-          rgba($color-react-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-react, 0.85),
+            rgba($color-react-dark, 0.85));
       }
 
       &--2 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-html, 0.85),
-          rgba($color-html-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-php, 0.85),
+            rgba($color-php-dark, 0.85));
       }
 
       &--3 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-js, 0.85),
-          rgba($color-js-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-js, 0.85),
+            rgba($color-js-dark, 0.85));
       }
+
       &--4 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-sass, 0.85),
-          rgba($color-sass-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-sass, 0.85),
+            rgba($color-sass-dark, 0.85));
       }
+
       &--5 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-redux, 0.85),
-          rgba($color-redux-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-redux, 0.85),
+            rgba($color-redux-dark, 0.85));
       }
 
       &--6 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-oop, 0.85),
-          rgba($color-oop-dark, 0.85)
-        );
+        background-image: linear-gradient(to right bottom,
+            rgba($color-oop, 0.85),
+            rgba($color-oop-dark, 0.85));
       }
     }
   }
@@ -287,7 +258,8 @@
 
   // -----media query to change the whole design
   // @include respond(tab-port) {
-  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) {
     //Functionality
     height: auto;
     border-radius: 3px;
