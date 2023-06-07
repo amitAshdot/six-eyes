@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/six-eyes/static/css/main.3db3f2ea.chunk.css",
-    "main.js": "/six-eyes/static/js/main.9acc9c50.chunk.js",
-    "main.js.map": "/six-eyes/static/js/main.9acc9c50.chunk.js.map",
-    "runtime-main.js": "/six-eyes/static/js/runtime-main.d01551d3.js",
-    "runtime-main.js.map": "/six-eyes/static/js/runtime-main.d01551d3.js.map",
-    "static/js/2.fcac298a.chunk.js": "/six-eyes/static/js/2.fcac298a.chunk.js",
-    "static/js/2.fcac298a.chunk.js.map": "/six-eyes/static/js/2.fcac298a.chunk.js.map",
+    "main.css": "/six-eyes/static/css/main.bafac763.css",
+    "main.js": "/six-eyes/static/js/main.c34a27cc.js",
+    "static/media/bshvil.mp4": "/six-eyes/static/media/bshvil.c5ec693ec406db1daf86.mp4",
+    "static/media/bshvil.webm": "/six-eyes/static/media/bshvil.abab1d8fd423bdde1a9e.webm",
+    "static/media/sass.png": "/six-eyes/static/media/sass.7cdbf6b5889c42b3e490.png",
+    "static/media/2048_logo.svg.png": "/six-eyes/static/media/2048_logo.svg.8a08749525284e9ab0d4.png",
+    "static/media/reactIcon.png": "/six-eyes/static/media/reactIcon.ad5bf3e17b12c42673aa.png",
+    "static/media/eventdo-logo.png": "/six-eyes/static/media/eventdo-logo.8915ebd25d310c92475d.png",
+    "static/media/JS.png": "/six-eyes/static/media/JS.5e1d936a3f9da96a594d.png",
+    "static/media/Redux.png": "/six-eyes/static/media/Redux.543b98d3c75b48613322.png",
+    "static/media/targetcall-logo.svg": "/six-eyes/static/media/targetcall-logo.1c6fc3c7b4b7cbb4d17efd7244f186cc.svg",
     "index.html": "/six-eyes/index.html",
-    "precache-manifest.981bd6728d0e5f436f0d11a8fc778a06.js": "/six-eyes/precache-manifest.981bd6728d0e5f436f0d11a8fc778a06.js",
-    "service-worker.js": "/six-eyes/service-worker.js",
-    "static/css/main.3db3f2ea.chunk.css.map": "/six-eyes/static/css/main.3db3f2ea.chunk.css.map",
-    "static/js/2.fcac298a.chunk.js.LICENSE.txt": "/six-eyes/static/js/2.fcac298a.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/six-eyes/static/media/sass.eac0fdba.png"
+    "main.bafac763.css.map": "/six-eyes/static/css/main.bafac763.css.map",
+    "main.c34a27cc.js.map": "/six-eyes/static/js/main.c34a27cc.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.d01551d3.js",
-    "static/js/2.fcac298a.chunk.js",
-    "static/css/main.3db3f2ea.chunk.css",
-    "static/js/main.9acc9c50.chunk.js"
+    "static/css/main.bafac763.css",
+    "static/js/main.c34a27cc.js"
   ]
 }
