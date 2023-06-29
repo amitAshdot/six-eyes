@@ -9,18 +9,19 @@ const Portfolio = () => {
                     <h2>Some Fun (Games)</h2>
                 </div>
                 <div className="porfolio__box">
-                    <div className="porfolio__item col-1-of-2">
+                    <div className="porfolio__item col-1-of-3">
                         <a href="https://amitashdot.github.io/mine-sweeper/" target="_blank" rel="noopener noreferrer" className="porfolio__item__btn btn">
                             <h2>Mine-Sweeper</h2>
                             <img src={minsweeperImg} alt="mine-sweeper symbol" className="porfolio__item__image" />
                         </a>
                     </div>
-                    <div className="porfolio__item col-1-of-2">
+                    <div className="porfolio__item col-1-of-3">
                         <a href="https://amitashdot.github.io/2048/" target="_blank" rel="noopener noreferrer" className="porfolio__item__btn btn ">
-                            <h2>OnAndOff</h2>
+                            <h2>2048</h2>
                             <img src={img2048} alt="2048 symbol" className="porfolio__item__image" />
                         </a>
                     </div>
+
                 </div>
             </div>
         </div>
